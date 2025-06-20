@@ -29,3 +29,7 @@ func InitRedis() error {
 	go StartCleanupTask(ctx)
 	return nil
 }
+
+func Close() error {
+	return Rdb.Close()
+}

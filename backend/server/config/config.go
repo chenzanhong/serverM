@@ -28,13 +28,6 @@ type TDengineConfig struct {
 	Password string `yaml:"password"`
 }
 
-type OSSConfig struct {
-	OSS_REGION            string `yaml:"OSS_REGION"`
-	OSS_ACCESS_KEY_ID     string `yaml:"OSS_ACCESS_KEY_ID"`
-	OSS_ACCESS_KEY_SECRET string `yaml:"OSS_ACCESS_KEY_SECRET"`
-	OSS_BUCKET            string `yaml:"OSS_BUCKET"`
-}
-
 type RedisConfig struct {
 	Host     string `yaml:"host"`
 	Port     string `yaml:"port"`
@@ -45,7 +38,6 @@ type RedisConfig struct {
 type EMAILConfig struct {
 	Name     string `yaml:"email_name"`
 	Password string `yaml:"email_password"`
-	Url      string `yaml:"base_url"`
 }
 type SMTPServerConfig struct {
 	Host string `yaml:"SMTPServer_host"`
@@ -65,7 +57,6 @@ type Script struct {
 type Config struct {
 	DB         DBConfig         `yaml:"db"`
 	TDengine   TDengineConfig   `yaml:"tdengine"`
-	OSS        OSSConfig        `yaml:"oss"`
 	Redis      RedisConfig      `yaml:"redis"`
 	Email      EMAILConfig      `yaml:"email"`
 	SMTPServer SMTPServerConfig `yaml:"smtp_server"`
@@ -73,9 +64,9 @@ type Config struct {
 }
 
 var (
-	StartPort      int
-	EndPort        int
-	PublicServerIP string
+	StartPort      int // 配置反向ssh服务可用的最小端口号
+	EndPort        int // 配置反向ssh服务可用的最大端口号
+	PublicServerIP string // 部署该项目的公网服务器
 	GithubRepoUrl  string
 	SshTunnelUsername string
 	SshTunnelPassword string

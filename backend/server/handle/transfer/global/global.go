@@ -41,6 +41,19 @@ var Pool *SSHConnectionPool // 全局连接池
 
 var FTS *FileTransferServiceImpl // 全局文件传输服务
 
+func (p *SSHConnectionPool) Close(){
+	p.Lock()
+	defer p.Unlock()
+
+	for key, conn := range p.Connections{
+		if conn.Client != nil{
+			conn.Client.Close()
+		}
+		delete(p.Connections, key)
+	}
+	log.Println("All SSH connections in pool closed")
+}
+
 // 添加连接到连接池中
 func (p *SSHConnectionPool) Add(server string, client *ssh.Client) {
 	p.Lock()
