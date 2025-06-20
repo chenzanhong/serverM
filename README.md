@@ -2,7 +2,10 @@
 
 ## 项目介绍
 - 一个基于golang、gin、gorm、redis、postgresql等开发的服务器监控管理平台。这里只包含了后端部分和客户端代理部分。目前已测试过的可正常监控的Linux服务器类型为为centos和ubuntu。
-- 该项目是软件工程综合实训的小组项目，目前已实现基本的用户与服务器管理，监控代理的实现，
+- 该项目是软件工程综合实训的小组项目（我负责后端功能的实现和后期项目的对接调整，并进行项目展示），目前已实现基本的用户与服务器管理、监控代理（数据采集与上传）、数据可视化等功能。
+- 前端：https://github.com/chenzanhong/WebApp 或 https://cnb.cool/szu/ServerMonitor/WebAPP/-/tree/test
+- 后端：https://github.com/chenzanhong/serverM 或 https://cnb.cool/szu/ServerMonitor/Platform/-/tree/master
+- 监控代理：https://github.com/chenzanhong/agent （完整代理项目）或 https://gitee.com/chenzanhong/agent （只含配置文件和可执行文件）
 
 ---
 
