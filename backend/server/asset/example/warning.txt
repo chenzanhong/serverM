@@ -1,0 +1,4 @@
+host1,user1,CPU与内存,主机host1发生CPU与内存告警：CPU使用率和内存使用率超过90%
+host2,user2,CPU,主机host2发生CPU告警：CPU使用率超过90%
+host3,user3,内存,主机host3发生内存告警：内存使用率超过90%
+// 主机名，用户名，预警类型，预警详情

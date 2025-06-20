@@ -1,0 +1,41 @@
+db: # 数据库配置
+  host: localhost # 数据库地址
+  port: "5432"   # 数据库端口
+  name: database # 数据库名
+  user: username    # 数据库用户名
+  password: password # 数据库密码
+
+tdengine: #TDengine数据库配置
+  host: localhost # tdengine服务器端地址
+  port: "6030"   # 数据库端口
+  name: database # 数据库名
+  user: username    # 数据库用户名
+  password: password # 数据库密码
+
+oss: #aliyun oss 配置
+  OSS_REGION: oss-cn-shenzhen # oss区域
+  OSS_ACCESS_KEY_ID: # oss key
+  OSS_ACCESS_KEY_SECRET:  # oss密钥
+  OSS_BUCKET:  # oss bucket
+  
+email:
+  email_name: xxxx@163.com
+  email_password: # 应用密码，163官网-设置-POP3/STMP/IMAP-开启pop3/smtp服务-记录应用密码
+  base_url: # ngrok http后提供的url
+  # 方式一是发送验证码，可以不用暴露内网，不使用这个base_url
+  # 方式二是发送链接，需要暴露内网，使用这个base_url
+  # 使用ngrok暴露内网（测试环境）
+  # ngrok http --url=你的静态域 8080
+  # ngrok http http://localhost:8080
+
+smtp_server:
+  SMTPServer_host: smtp.163.com
+  SMTPServer_port: 465  # 25 在服务器上会被限制
+
+script:
+  github_repo_url: https://gitee.com/chenzanhong/agent.git # agent仓库地址
+  start_port: 10000 # 反向SSH可用的最小端口
+  end_port: 45000 # 反向SSH最大端口
+  ssh_tunnel_username: xxxx # 反向SSH服务器用户名
+  ssh_tunnel_password: xxxx # 反向SSH服务器密码
+  public_server_ip: 113.44.170.52 # 反向SSH服务器公网IP

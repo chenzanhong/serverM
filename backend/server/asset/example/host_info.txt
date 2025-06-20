@@ -1,0 +1,12 @@
+root,root1,113.44.170.1,0,Linux,Ubuntu 20.04,x86_64
+root,root2,113.44.170.2,0,Linux,CentOS Stream 9,x86_64
+root,root3,113.44.170.3,0,Linux,CentOS 6,x86_64
+user1,host1_1,113.44.170.4,1,Linux,Ubuntu 20.04,x86_64
+user1,host1_2,113.44.171.4,1,Linux,Ubuntu 20.04,x86_64
+user1,host1_3,113.44.172.4,1,Linux,Ubuntu 20.04,x86_64
+user1,host1_4,113.44.173.4,1,Linux,Ubuntu 20.04,x86_64
+user2,host2,113.44.170.5,0,Linux,CentOS Stream 9,x86_64
+user3,host3,113.44.170.6,0,Linux,Ubuntu 24.04,x86_64
+user4,host4,113.44.170.7,0,Linux,Ubuntu 24.04,x86_64
+user5,host5,113.44.170.8,0,Linux,CentOS 7,x86_64
+// 用户名，主机名，ip，所属公司，操作系统，平台/版本，内核
