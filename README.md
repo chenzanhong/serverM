@@ -1,7 +1,7 @@
 # serverM 
 
 ## 项目介绍
-- 一个基于golang、gin、gorm、redis、postgresql等开放的服务器监控管理平台。这里只包含了后端部分和客户端代理部分。目前已测试过的可正常监控的Linux服务器类型为为centos和ubuntu。
+- 一个基于golang、gin、gorm、redis、postgresql等开发的服务器监控管理平台。这里只包含了后端部分和客户端代理部分。目前已测试过的可正常监控的Linux服务器类型为为centos和ubuntu。
 - 该项目是软件工程综合实训的小组项目，目前已实现基本的用户与服务器管理，监控代理的实现，
 
 ---
