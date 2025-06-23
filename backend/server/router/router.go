@@ -118,6 +118,8 @@ func setupPublicRoutes(r *gin.Engine) {
 	r.POST("/agent/register", login.Register)
 	r.POST("/registertoken", e.SendVerificationCode) // 注册时发送验证码邮件
 	r.POST("/agent/login", login.Login)
+	r.POST("/reset_password", update.ResetPassword)                // 校验token，设置密码
+	r.POST("/agent/request_reset_password", update.RequestResetPassword) // 请求设置密码，发送含校验码的邮件
 
 	r.GET("/agentscript", getscript.GetAgentScript)                         // 获取安装代理程序的脚本，?hostname=
 	r.GET("/combinedscript", getscript.GetCombinedScript)                   // 获取合并后的脚本——包含安装代理程序和配置反向SSH隧道
@@ -134,8 +136,6 @@ func setupAuthRoutes(r *gin.Engine) {
 		auth.GET("/userInfo", info.GetUserInfo)                           // 当前登录用户的个人信息
 		auth.GET("/allUserInfo", info.GetAllUserInfo)                     // 所有用户信息
 		auth.POST("/updateUserInfo", update.UpdateUserInfo)               // 更新当前用户信息
-		auth.POST("/reset_password", update.ResetPassword)                // 校验token，设置密码
-		auth.POST("/request_reset_password", update.RequestResetPassword) // 请求设置密码，发送含校验码的邮件
 		auth.GET("/info/recivelist", info.GetReceiveList)                 // 获取该用户作为接收者所接收到的所有信息
 		auth.GET("/info/sendlist", info.GetSendList)                      // 获取该用户作为发送者所发送的所有信息
 		auth.POST("/info/manage", notice.ManageNotice)                    // 处理通知，当前通知没有“同意”和“拒绝”，只有“未处理”、“已处理”、“已过期”3个状态，默认同意处理
