@@ -44,8 +44,8 @@
 
 ---
 
-![前端首页](//docs/image_show/index.png)
-其他前端页面展示见//docs/image_show
+![前端首页](/docs/image_show/index.png)
+其他前端页面展示见/docs/image_show
 
 ## 项目架构
 
